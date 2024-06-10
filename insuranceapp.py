@@ -1,4 +1,4 @@
-import os
+
 
 import streamlit as st
 from streamlit_navigation_bar import st_navbar
@@ -12,14 +12,14 @@ from pages_app.output import show_output
 st.set_page_config(initial_sidebar_state="collapsed")
 
         
-pages = ["Introduction", "Data Acquisition", "Pre Processing", "Modelling", "Output"]
+pages = ["Summary", "System Architecture", "Data Pipeline", "Modelling Pipeline", "Model Evaluation"]
 
 styles = {
     "nav": {
        "background-color": "rgb(2,106,129)",
     },
    "div": {
-        "max-width": "40rem",
+        "max-width": "45rem",
     },
     "span": {
         "color": "white",
@@ -34,6 +34,7 @@ styles = {
         "background-color": "rgba(179,205,224)",
          "color": "black",
     },
+
 }
 
 options = {
@@ -48,11 +49,11 @@ page = st_navbar(
 )
 
 functions = {
-    "Introduction": show_home,
-    "Data Acquisition":show_data,
-    "Pre Processing":show_preproc,
-    "Modelling":show_model,
-    "Output":show_output,
+    "Summary": show_home,
+    "System Architecture":show_data,
+    "Data Pipeline":show_preproc,
+    "Modelling Pipeline":show_model,
+    "Model Evaluation":show_output,
 }
 go_to = functions.get(page)
 if go_to:
