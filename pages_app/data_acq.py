@@ -10,34 +10,17 @@ from PIL import Image
 
 def show_data():
     
-    st.header("Data Acquisition", divider='red')
+    st.header("System Architecture", divider='red')
     
     st.write(
         """
-        Machine learning models predictions depend on the quality and relevance of the data they are trained on. 
-        
-        This data can come from various sources, including historical historical claims data, customer demographics and health information.
+        A machine learning model system architecture involves a series of interconnected components that work together to leverage machine learning for various insurance tasks.
 
         """
     )
     
-    st.subheader("Overview of the data used in the project:")
-       
-       
-    col_content = [
-        "Total No. of Records = 521300",
-        "Total No. of Columns = 20",
-        "Total No. of Targets (No of Claims) = 1084"
-    ]
-
-     
-
-    for item in col_content:
-        st.markdown(f"- {item}")  # Use f-string for dynamic formatting
-    
-            
-            
-    st.subheader("Snapshot of the input data")     
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>High-level Architecture</u></h5>", unsafe_allow_html=True)
+          
             # Load the image
-    image = Image.open("images/dataset.jpg")
+    image = Image.open("images/sys-arch.jpg")
     st.image(image, use_column_width=True)
