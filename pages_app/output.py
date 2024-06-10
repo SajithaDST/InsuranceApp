@@ -9,7 +9,7 @@ import streamlit as st
 import pandas as pd
 
 def show_output():
-    st.header("Model Predictions", divider='red')
+    st.header("Model Output", divider='red')
     st.write(
         """
         The prediction phase is where the trained model is used to make predictions on new and unseen data, after the model learns from historical / training data.
