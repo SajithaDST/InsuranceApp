@@ -20,7 +20,10 @@ def show_data():
     )
     
     st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>High-level Architecture</u></h5>", unsafe_allow_html=True)
-          
+     
+    col1, col2,col3 = st.columns([1,4,1])
+     
+    with col2:     
             # Load the image
-    image = Image.open("images/sys-arch.jpg")
-    st.image(image, use_column_width=True)
+            image = Image.open("images/sys-arch.jpg")
+            st.image(image, use_column_width=True)

@@ -30,33 +30,44 @@ def show_model():
     Evaluation_Results.loc['LGBM'] = pd.Series([92,89,91], index=Evaluation_Results.columns)
     Evaluation_Results.loc['CatBoost'] = pd.Series([91,88,90], index=Evaluation_Results.columns)
 
-    
-    st.dataframe(Evaluation_Results,use_container_width=True)
+    col1, col2,col3 = st.columns([1,8,1])
+             
+    with col2:  
+        st.dataframe(Evaluation_Results,use_container_width=True)
 
 
     # Display the text centered within the column
     
     st.markdown("\n")
     st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>ROC-AUC Curve model wise</u></h5>", unsafe_allow_html=True)
-    col1, col2,col3 = st.columns(3)
     
-    with col1:
-        st.image(Image.open("images/ROC Model 1.jpg"), use_column_width=True,caption='ROC Curve for XGBoost')
-   
+    col1, col2,col3 = st.columns([1,10,1])
+                
     with col2:
-        st.image(Image.open("images/ROC Model 2.jpg"), use_column_width=True,caption='ROC Curve for LGBM')
-    
-    with col3:
-        st.image(Image.open("images/ROC Model 3.jpg"), use_column_width=True,caption='ROC Curve for CatBoost')
-    
-    st.markdown("\n")
-    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Final selected model with hyperparameters</u></h5>", unsafe_allow_html=True)
-    st.write(
-         """
-         Based on the performance characteristics, XGBoost model was selected as the final model with below hyperparameters:
-         """)
-    image = Image.open("images/modelhpm.jpg")
-    st.image(image)
+        
+        col1, col2,col3 = st.columns(3)
+        
+        with col1:
+            st.image(Image.open("images/ROC Model 1.jpg"), use_column_width=True,caption='ROC Curve for XGBoost')
+       
+        with col2:
+            st.image(Image.open("images/ROC Model 2.jpg"), use_column_width=True,caption='ROC Curve for LGBM')
+        
+        with col3:
+            st.image(Image.open("images/ROC Model 3.jpg"), use_column_width=True,caption='ROC Curve for CatBoost')
+        
+        st.markdown("\n")
+        st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Final selected model with hyperparameters</u></h5>", unsafe_allow_html=True)
+        st.write(
+             """
+             Based on the performance characteristics, XGBoost model was selected as the final model with below hyperparameters:
+             """)
+             
+    col1, col2,col3 = st.columns([1,1.5,1])
+                
+    with col2:  
+        image = Image.open("images/modelhpm.jpg")
+        st.image(image)
     
    
    
