@@ -9,7 +9,7 @@ import streamlit as st
 import pandas as pd
 
 def show_output():
-    st.header("Model Output", divider='red')
+    st.header("Model Predictive Analysis", divider='red')
     st.write(
         """
         The prediction phase is where the trained model is used to make predictions on new and unseen data, after the model learns from historical / training data.
@@ -17,7 +17,7 @@ def show_output():
         """
     )
     
-    st.subheader("**Final Output Summary**") 
+    st.subheader("**Final Model Performance Summary**") 
     
     col_content = [
         "Total No. of Policies = 55135",
@@ -35,10 +35,10 @@ def show_output():
         st.markdown(f"- {item}")  # Use f-string for dynamic formatting
         
     
-    st.subheader("**Examples of risk predictions for some policies**") 
+    st.subheader("**Model Forecast Calculator**") 
      
     
-    data = {'Policy No': ['P2378AH', 'P6689GD', 'P0089TU'], 'Risk Probability': [0.92, 0.54, 0.12], 'Risk Bucket': ['Bucket 1', 'Bucket 29', 'Bucket 46'], 'Risk Category': ['High Risk', 'Moderate Risk', 'Low Risk']}
+    data = {'Policy No': ['P2378AH', 'P6689GD', 'P0089TU','P5567BU','P9545VZ'], 'Risk Probability': [0.92, 0.54, 0.12,0.62,0.84], 'Risk Bucket': ['Bucket 1', 'Bucket 29', 'Bucket 46','Bucket 33','Bucket 2'], 'Risk Category': ['High Risk', 'Moderate Risk', 'Low Risk', 'Moderate Risk','High Risk']}
     df = pd.DataFrame(data)
     
     # Options for dropdown selection

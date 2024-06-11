@@ -24,7 +24,7 @@ def show_home():
     text = "&nbsp;Model Definition : Predict the likelihood of claims within the first 3 years of policy initiation.&nbsp;"
     
     # Define HTML with inline CSS (replace with desired color)
-    html_string = f"<b style='background-color:#E9ECE4; color:#333; padding: 20px;padding-right: 30px; text-align: center;'>{text}</b>"
+    html_string = f"<b style='background-color:#CDEBCD; color:#333; padding: 20px;padding-right: 30px; text-align: center;'>{text}</b>"
     st.markdown("\n")
     st.markdown("\n")
     # Display the HTML with unsafe_allow_html (use with caution)
@@ -32,19 +32,20 @@ def show_home():
     st.markdown("\n")
     st.markdown("\n")
         
+    
     # Display the HTML content
     st.markdown("<h6 style='text-align: center; color: black;'>&ensp; &ensp; <u>Insurance Claim Modelling System</u></h6>", unsafe_allow_html=True)
     
     # Define border width and color (adjust values as needed)
-    border_width = 10
+    border_width = 5
     border_color = (220, 220, 220)  # Light gray border
-    image = Image.open("images/modelsummary.jpg")
+    image = Image.open("images/page1.jpg")
     # Display the selected image
     bordered_image = Image.new("RGB", (image.width + 2 * border_width, 
                                 image.height + 2 * border_width), border_color)
     # Paste the original image onto the new image with border2
     bordered_image.paste(image, (border_width, border_width))
-    st.image(image)
+    st.image(bordered_image)
     
     st.markdown("\n")
             
