@@ -9,7 +9,7 @@ from pages_app.preproc import show_preproc
 from pages_app.model import show_model
 from pages_app.output import show_output
 
-st.set_page_config(initial_sidebar_state="collapsed")
+st.set_page_config( layout="wide",initial_sidebar_state="collapsed")
 
         
 pages = ["Summary", "System Architecture", "Data Pipeline", "Modelling Pipeline", "Model Evaluation"]
