@@ -30,56 +30,61 @@ def show_output():
     ]
 
     
-    col1, col2 , col3= st.columns([0.5,1.5,2])
+    col1, col2 , col3= st.columns([0.5,1.5,2.3])
     
     with col2:
-        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Policies = 55135</b>"
+        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 15px;padding-right: 30px; text-align: center;'>Total No. of Policies = 55135</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
         st.markdown(html_string, unsafe_allow_html=True)
         
     with col3:
-        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Risky Policies = 1435</b>"
+        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 15px;padding-right: 30px; text-align: center;'>Total No. of Claims = 48</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
         st.markdown(html_string, unsafe_allow_html=True)
 
-    col1, col2 , col3= st.columns([0.5,1.5,2])
+    col1, col2 , col3= st.columns([0.43,2,2.78])
     
     with col2:
-        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 20px;padding-right: 60px; text-align: center;'>Total No. of Claims = 48</b>"
+        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 15px;padding-right: 22px; text-align: center;'>Total No. of Risky Policies = 1435</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
         st.markdown(html_string, unsafe_allow_html=True)
         
     with col3:
-        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Claims Captured = 30</b>"
+        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 15px;padding-right: 20px; text-align: center;'>Total No. of Claims Captured = 30</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
         st.markdown(html_string, unsafe_allow_html=True)
         
-    col1, col2 = st.columns([0.6,1.5])
+    col1, col2 , col3= st.columns([3.57,3.63,3.8])
         
-    with col2:
-        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 20px;padding-right: 20px; text-align: center;'>Percentage of Claims Captured = 62.5 %</b>"
+    with col1:
+        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 13px; text-align: center;'>% Claims Captured = 62.5 %</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
         st.markdown(html_string, unsafe_allow_html=True)
         
-            
-    col1, col2 = st.columns([0.45,2])
         
     with col2:
-        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 20px;padding-right: 20px; text-align: center;'>Percentage of Risky Policies captured in the top 5 % = 2.6%</b>"
+        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 13px;text-align: center;'>Risk Bucket Size NOP = 2.6%</b>"
         st.markdown("\n")
         st.markdown("\n")
         # Display the HTML with unsafe_allow_html (use with caution)
-        st.markdown(html_string, unsafe_allow_html=True)         
+        st.markdown(html_string, unsafe_allow_html=True)  
+        
+    with col3:
+        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 13px; text-align: center;'>Risk Bucket Size ANP = 5.09%</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True) 
             
         
         
