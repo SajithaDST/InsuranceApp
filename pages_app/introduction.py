@@ -66,7 +66,7 @@ def show_home():
     data = {
         'Prediction Probability': ['Probability of policy converting into a claim'],
         'Probability Bucket': ['Probability divided into quantiles'],
-        'Probability Category': ['High, Medium, Low etc.']
+        'Probability Category': ['High, Moderate, Low ']
     }
     df = pd.DataFrame(data)
     

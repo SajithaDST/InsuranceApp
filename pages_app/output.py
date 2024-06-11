@@ -30,10 +30,61 @@ def show_output():
     ]
 
     
-
-    for item in col_content:
-        st.markdown(f"- {item}")  # Use f-string for dynamic formatting
+    col1, col2 , col3= st.columns([0.5,1.5,2])
+    
+    with col2:
+        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Policies = 55135</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)
         
+    with col3:
+        html_string = "<b style='background-color:#FAF0DC; color:#A94064; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Risky Policies = 1435</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)
+
+    col1, col2 , col3= st.columns([0.5,1.5,2])
+    
+    with col2:
+        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 20px;padding-right: 60px; text-align: center;'>Total No. of Claims = 48</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)
+        
+    with col3:
+        html_string = "<b style='background-color:#CDEBCD; color:#658354; padding: 20px;padding-right: 30px; text-align: center;'>Total No. of Claims Captured = 30</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)
+        
+    col1, col2 = st.columns([0.6,1.5])
+        
+    with col2:
+        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 20px;padding-right: 20px; text-align: center;'>Percentage of Claims Captured = 62.5 %</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)
+        
+            
+    col1, col2 = st.columns([0.45,2])
+        
+    with col2:
+        html_string = "<b style='background-color:#ADD8E6; color:#241571; padding: 20px;padding-right: 20px; text-align: center;'>Percentage of Risky Policies captured in the top 5 % = 2.6%</b>"
+        st.markdown("\n")
+        st.markdown("\n")
+        # Display the HTML with unsafe_allow_html (use with caution)
+        st.markdown(html_string, unsafe_allow_html=True)         
+            
+        
+        
+    st.markdown("\n")
+    st.markdown("\n")
     st.markdown("\n")
     st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Model Forecast Calculator</u></h5>", unsafe_allow_html=True)
     
