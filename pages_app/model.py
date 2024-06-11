@@ -22,7 +22,7 @@ def show_model():
          and the performance of these models were evaluated on the provided data.
          """)
          
-    st.subheader("**Summary of model performance metrics:**") 
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Model Performance Summary</u></h5>", unsafe_allow_html=True)
   
     Evaluation_Results = pd.DataFrame(np.zeros((3,3)), columns=['Precision', 'Recall','F1 Score'])
     Evaluation_Results.index=['XGBoost','LGBM','CatBoost']
@@ -37,7 +37,7 @@ def show_model():
     # Display the text centered within the column
     
     st.markdown("\n")
-    st.subheader("**ROC-AUC Curve model wise**") 
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>ROC-AUC Curve model wise</u></h5>", unsafe_allow_html=True)
     col1, col2,col3 = st.columns(3)
     
     with col1:
@@ -50,10 +50,13 @@ def show_model():
         st.image(Image.open("images/ROC Model 3.jpg"), use_column_width=True,caption='ROC Curve for CatBoost')
     
     st.markdown("\n")
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Final selected model with hyperparameters</u></h5>", unsafe_allow_html=True)
     st.write(
          """
-         Based on the performance characteristics, XGBoost model was selected as the final model.
+         Based on the performance characteristics, XGBoost model was selected as the final model with below hyperparameters:
          """)
+    image = Image.open("images/modelhpm.jpg")
+    st.image(image)
     
    
    
