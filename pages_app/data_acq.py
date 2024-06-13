@@ -29,6 +29,8 @@ def show_data():
             st.image(image, use_column_width=True)
     
     st.markdown("\n")
-    st.markdown("Key Components :")
-    points = ["Data Connector - Involves acquiring and preparing the data needed to train the model.", "Modelling Workbench - Environment to develop, experiment, and train the model.", "Model Validation - Evaluates the model's performance on unseen data to assess its generalization ability.","Model Deployment - Involves releasing the model to a production environment where it can be used to make predictions on real-world data.","Model Tracking - To identify performance degradation over time or changing data patterns that require retraining."]
-    st.markdown(f"<ul>{''.join([f'<li>{point}</li>' for point in points])}</ul>", unsafe_allow_html=True)
+    
+    with st.container(border=True):
+        st.markdown("Key Components :")
+        points = ["<span style='color:orange'>Data Connector</span> - Involves acquiring and preparing the data needed to train the model.", "<span style='color:green'>Modelling Workbench</span> - Environment to develop, experiment, and train the model.", "<span style='color:blue'>Model Validation</span> - Evaluates the model's performance on unseen data to assess its generalization ability.","<span style='color:purple'>Model Deployment</span> - Involves releasing the model to a production environment where it can be used to make predictions on real-world data.","<span style='color:gray'>Model Tracking</span> - To identify performance degradation over time or changing data patterns that require retraining."]
+        st.markdown(f"<ul>{''.join([f'<li>{point}</li>' for point in points])}</ul>", unsafe_allow_html=True)
