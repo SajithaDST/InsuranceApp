@@ -68,11 +68,18 @@ def show_model():
     with col2:  
         image = Image.open("images/modelhpm.jpg")
         st.image(image)
+    st.markdown("\n")
+    st.markdown("\n")
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Final Model Output Summary</u></h5>", unsafe_allow_html=True)
     
+    col1, col2,col3 = st.columns([1,3.5,1])
+                
+    with col2:  
+        image = Image.open("images/kpis.jpg")
+        st.image(image)
+ 
    
-   
     
     
     
     
-

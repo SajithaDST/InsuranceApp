@@ -48,33 +48,6 @@ def show_preproc():
          
 
     df = pd.read_csv('optbinning.csv')
-    
-    # Define image dictionary with filenames as keys and image objects as values
-    # images = {
-    #     "Affluence Score": Image.open("images/aff_opt.jpg"),
-    #     "Age": Image.open("images/age_opt.jpg"),
-    #     "Gender": Image.open("images/gender_opt.jpg"),
-    #     "Income": Image.open("images/income_opt.jpg"),
-    #     "Sum Assured": Image.open("images/sa_opt.jpg"),
-    # }
-    
-
-
-    # # Create a dropdown menu with image names as options
-    # selected_image = st.selectbox("Select a Feature:", list(images.keys()))
-
- 
-
-    # st.image(images[selected_image], use_column_width=True, caption='Optbinning details for '+selected_image)
-
-
-    #image_path = "images/AGE BINNING.jpeg"
-    
-    # Open the image using Pillow library
-    #image = Image.open(image_path)
-    
-    # Display the image with an optional caption
-    #st.image(image)
 
     dropdown_options = list(df['Tag'].unique())  
     
