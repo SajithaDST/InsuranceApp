@@ -12,14 +12,14 @@ from pages_app.output import show_output
 st.set_page_config(layout="wide",initial_sidebar_state="collapsed")
 
         
-pages = ["Summary", "System Architecture", "Data Pipeline", "Modelling Pipeline", "Model Evaluation"]
+pages = ["Summary", "System Architecture", "Data Pipeline", "Modelling Pipeline", "Model Deployment"]
 
 styles = {
     "nav": {
        "background-color": "rgb(2,106,129)",
     },
    "div": {
-        "max-width": "45rem",
+        "max-width": "50rem",
     },
     "span": {
         "color": "white",
@@ -53,7 +53,7 @@ functions = {
     "System Architecture":show_data,
     "Data Pipeline":show_preproc,
     "Modelling Pipeline":show_model,
-    "Model Evaluation":show_output,
+    "Model Deployment":show_output,
 }
 go_to = functions.get(page)
 if go_to:
