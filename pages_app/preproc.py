@@ -44,7 +44,7 @@ def show_preproc():
     st.markdown("\n") 
     st.markdown("\n") 
     st.markdown("\n")
-    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Feature Predictive Power Asessment:</u></h5>", unsafe_allow_html=True) 
+    st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Feature Predictive Power Asessment</u></h5>", unsafe_allow_html=True) 
          
 
     df = pd.read_csv('optbinning.csv')
