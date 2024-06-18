@@ -60,7 +60,7 @@ def show_model():
         st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Final selected model with hyperparameters</u></h5>", unsafe_allow_html=True)
         st.write(
              """
-             Based on the performance characteristics, XGBoost model was selected as the final model with below hyperparameters:
+             Based on the performance characteristics, the XGBoost model was selected as the final model with the following hyperparameters.
              """)
              
     col1, col2,col3 = st.columns([1,1.5,1])
