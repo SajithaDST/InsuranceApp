@@ -27,26 +27,26 @@ def show_output():
  
     st.markdown("<h5 style='text-align: center; color: black;'>&ensp; &ensp; <u>Model Forecast Calculator</u></h5>", unsafe_allow_html=True)
    
-    data = {'Policy No': ['P2378AH', 'P6689GD', 'P0089TU','P5567BU','P9545VZ'], 'Risk Probability': [0.92, 0.54, 0.12,0.62,0.84], 'Risk Bucket': ['Bucket 1', 'Bucket 29', 'Bucket 46','Bucket 33','Bucket 2'], 'Risk Category': ['High Risk', 'Moderate Risk', 'Low Risk', 'Moderate Risk','High Risk']}
+    data = {'Policy Number': ['P2378AH', 'P6689GD', 'P0089TU','P5567BU','P9545VZ'], 'Risk Probability': [0.92, 0.54, 0.12,0.62,0.84], 'Risk Bucket': ['Bucket 1', 'Bucket 29', 'Bucket 46','Bucket 33','Bucket 2'], 'Risk Category': ['High Risk', 'Moderate Risk', 'Low Risk', 'Moderate Risk','High Risk']}
     df = pd.DataFrame(data)
     
     # Options for dropdown selection
-    dropdown_options = list(df['Policy No'].unique())  
+    dropdown_options = list(df['Policy Number'].unique())  
     
     # Create two columns with equal width
     col1, col2,col3 = st.columns([1,3,1])
      
     with col2: 
-        st.markdown("The deployed model outputs risk predictors for a given input set of policy details. Some examples are given below:")
+        st.markdown("The deployed model outputs risk predictors for a given input set of policy details. Some examples are given below.")
         # Create a dropdown menu
         st.markdown("\n")
-        selected_col2_value = st.selectbox("Select Policy No:", dropdown_options)
+        selected_col2_value = st.selectbox("Select Policy Number:", dropdown_options)
     
 
      
     st.write("Policy Risk Details")
     if selected_col2_value:
-      filtered_df = df[df['Policy No'] == selected_col2_value]
+      filtered_df = df[df['Policy Number'] == selected_col2_value]
       st.dataframe(filtered_df, hide_index=True,use_container_width=True)
     else:
       st.write("Select a value from the dropdown to filter the table.")
