@@ -68,7 +68,7 @@ def show_home():
     # Create a sample DataFrame (replace with your data)
     data = {
         'Profile Data': ['Age, Gender, Occupation etc.'],
-        'Medical Data': ['Previous and current medical history'],
+        'Medical Data': ['Medical history and current health status'],
         'Insurance Policy Data': ['Policy number, Annual premium, Agent information etc.']
     }
     df = pd.DataFrame(data)
